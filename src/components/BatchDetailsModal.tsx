@@ -165,7 +165,7 @@ export const BatchDetailsModal: React.FC<BatchDetailsModalProps> = ({ batch, onC
               {batch.goodsName}
             </h3>
             <p style={{ fontSize: '0.8rem', color: 'var(--color-muted)', marginTop: '4px' }}>
-              Category: <strong style={{ color: '#E2E8F0' }}>{batch.category}</strong> • Purchased:{' '}
+              Category: <strong style={{ color: 'var(--color-muted)' }}>{batch.category}</strong> • Purchased:{' '}
               {new Date(batch.dateBrought).toLocaleDateString()}
             </p>
           </div>
@@ -312,7 +312,7 @@ export const BatchDetailsModal: React.FC<BatchDetailsModalProps> = ({ batch, onC
                   Financial Audit Ledger
                 </h4>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', fontFamily: 'var(--font-mono)', fontSize: '0.85rem' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', color: '#E2E8F0' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', color: 'var(--color-muted)' }}>
                     <span>Gross Sales Revenue ({batch.quantitySold} units):</span>
                     <span style={{ fontWeight: 700, color: 'var(--color-foreground)' }}>₦{totalRevenue.toFixed(2)}</span>
                   </div>
@@ -362,7 +362,7 @@ export const BatchDetailsModal: React.FC<BatchDetailsModalProps> = ({ batch, onC
                     <tbody>
                       {batch.sales.map((sale) => (
                         <tr key={sale.id}>
-                          <td style={{ fontFamily: 'var(--font-body)', color: '#E2E8F0' }}>
+                          <td style={{ fontFamily: 'var(--font-body)', color: 'var(--color-muted)' }}>
                             {new Date(sale.dateSold).toLocaleDateString()}
                           </td>
                           <td className="font-mono" style={{ fontWeight: 700, color: 'var(--color-foreground)' }}>{sale.quantitySold}</td>
@@ -399,7 +399,7 @@ export const BatchDetailsModal: React.FC<BatchDetailsModalProps> = ({ batch, onC
                     <tbody>
                       {batch.expenses.map((expense) => (
                         <tr key={expense.id}>
-                          <td style={{ color: '#E2E8F0' }}>
+                          <td style={{ color: 'var(--color-muted)' }}>
                             {new Date(expense.dateIncurred).toLocaleDateString()}
                           </td>
                           <td style={{ color: 'var(--color-foreground)', fontWeight: 500 }}>{expense.description}</td>

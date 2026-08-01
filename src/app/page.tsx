@@ -129,7 +129,7 @@ export default function DashboardPage() {
             {activeStore ? activeStore.name : 'Business Hub'} Dashboard
           </h2>
           <p style={{ fontSize: '0.88rem', color: 'var(--color-muted)', marginTop: '4px' }}>
-            Real-time capital flow, batch velocity analysis & profit leak detection • Operator: <strong style={{ color: '#E2E8F0' }}>{state.currentUser?.username}</strong>
+            Real-time capital flow, batch velocity analysis & profit leak detection • Operator: <strong style={{ color: 'var(--color-muted)' }}>{state.currentUser?.username}</strong>
           </p>
         </div>
         <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
@@ -210,12 +210,12 @@ export default function DashboardPage() {
         className="glass-card animate-fade-in"
         style={{
           padding: '28px',
-          background: 'linear-gradient(135deg, rgba(2, 6, 23, 0.9) 0%, rgba(15, 23, 42, 0.75) 100%)',
-          border: '1px solid rgba(255, 255, 255, 0.12)',
+          background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(241, 245, 249, 0.6) 100%)',
+          border: '1px solid var(--color-card-border)',
           animationDelay: '300ms',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '16px', marginBottom: '22px', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid var(--color-subtle)', paddingBottom: '16px', marginBottom: '22px', flexWrap: 'wrap' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: 'rgba(6, 182, 212, 0.15)', border: '1px solid rgba(6, 182, 212, 0.35)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#06B6D4' }}>
               <Sparkles size={18} />
@@ -229,7 +229,7 @@ export default function DashboardPage() {
               </p>
             </div>
           </div>
-          <span style={{ fontSize: '0.72rem', fontFamily: 'var(--font-mono)', color: '#10B981', display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <span style={{ fontSize: '0.72rem', fontFamily: 'var(--font-mono)', color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '6px' }}>
             <ShieldCheck size={16} /> AUDIT STATUS: ACTIVE
           </span>
         </div>
@@ -275,11 +275,11 @@ export default function DashboardPage() {
                         {rec.title}
                       </span>
                     </div>
-                    <p style={{ fontSize: '0.82rem', color: '#CBD5E1', lineHeight: 1.5 }}>
+                    <p style={{ fontSize: '0.82rem', color: 'var(--color-muted)', lineHeight: 1.5 }}>
                       {rec.description}
                     </p>
                   </div>
-                  <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)', paddingTop: '12px' }}>
+                  <div style={{ borderTop: '1px solid var(--color-subtle)', paddingTop: '12px' }}>
                     <p style={{ fontSize: '0.68rem', fontFamily: 'var(--font-mono)', color: 'var(--color-muted)', textTransform: 'uppercase', letterSpacing: '0.08em' }}>
                       RECOMMENDATION ACTION
                     </p>

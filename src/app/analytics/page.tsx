@@ -145,7 +145,7 @@ export default function AnalyticsPage() {
         </div>
 
         {/* Period Selector Tabs */}
-        <div style={{ display: 'flex', background: 'rgba(2, 6, 23, 0.8)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '14px', padding: '4px' }}>
+        <div style={{ display: 'flex', background: 'var(--color-bg-subtle)', border: '1px solid var(--color-card-border)', borderRadius: '14px', padding: '4px' }}>
           {(['all', 'weekly', 'monthly', 'yearly'] as PeriodFilter[]).map((tab) => (
             <button
               key={tab}
@@ -156,9 +156,9 @@ export default function AnalyticsPage() {
                 fontSize: '0.78rem',
                 fontWeight: 700,
                 fontFamily: 'var(--font-heading)',
-                background: period === tab ? 'rgba(6, 182, 212, 0.2)' : 'transparent',
-                color: period === tab ? '#06B6D4' : '#94A3B8',
-                border: period === tab ? '1px solid rgba(6, 182, 212, 0.45)' : '1px solid transparent',
+                background: period === tab ? 'rgba(8, 145, 178, 0.12)' : 'transparent',
+                color: period === tab ? 'var(--color-accent)' : 'var(--color-muted)',
+                border: period === tab ? '1px solid rgba(8, 145, 178, 0.3)' : '1px solid transparent',
                 textTransform: 'capitalize',
                 transition: 'all 200ms ease',
                 cursor: 'pointer',
@@ -216,7 +216,7 @@ export default function AnalyticsPage() {
             {avgTurnaround === 'N/A' ? 'N/A' : `${avgTurnaround}d`}
           </p>
           <div style={{ fontSize: '0.72rem', color: 'var(--color-muted)', fontFamily: 'var(--font-mono)', marginTop: '4px' }}>
-            Completed Lots: <strong style={{ color: '#E2E8F0' }}>{completedBatchesCount}</strong>
+            Completed Lots: <strong style={{ color: 'var(--color-muted)' }}>{completedBatchesCount}</strong>
           </div>
         </div>
 
@@ -235,7 +235,7 @@ export default function AnalyticsPage() {
             x
           </p>
           <div style={{ fontSize: '0.72rem', color: 'var(--color-muted)', fontFamily: 'var(--font-mono)', marginTop: '4px' }}>
-            COGS Outlay: <strong style={{ color: '#E2E8F0' }}>₦{totalCogs.toFixed(0)}</strong>
+            COGS Outlay: <strong style={{ color: 'var(--color-muted)' }}>₦{totalCogs.toFixed(0)}</strong>
           </div>
         </div>
       </div>
@@ -308,7 +308,7 @@ export default function AnalyticsPage() {
                         {rec.title}
                       </span>
                     </div>
-                    <p style={{ fontSize: '0.8rem', color: '#CBD5E1', lineHeight: 1.4 }}>
+                    <p style={{ fontSize: '0.8rem', color: 'var(--color-muted)', lineHeight: 1.4 }}>
                       {rec.description}
                     </p>
                     <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.08)', paddingTop: '8px', marginTop: '10px', fontSize: '0.78rem', color: 'var(--color-foreground)', fontWeight: 600 }}>

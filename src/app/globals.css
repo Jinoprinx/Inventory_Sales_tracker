@@ -22,7 +22,7 @@
 
   /* Typography Colors */
   --color-foreground: #0F172A;      /* Slate 900 for solid dark text */
-  --color-muted: #475569;           /* Slate 600 for body/sub-text */
+  --color-muted: #334155;           /* Slate 700 for readable body/sub-text */
   --color-subtle: #CBD5E1;          /* Slate 300 for borders & dividers */
 
   /* Spacing Scale (UI/UX Pro Max Standard) */

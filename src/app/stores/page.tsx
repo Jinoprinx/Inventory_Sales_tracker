@@ -204,7 +204,7 @@ export default function StoresPage() {
                         fontFamily: 'var(--font-mono)',
                       }}
                     >
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: '#CBD5E1' }}>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '6px', color: 'var(--color-muted)' }}>
                         <ShoppingBag size={14} style={{ color: '#06B6D4' }} />
                         <span>{summary.batchesCount} Batches</span>
                       </div>

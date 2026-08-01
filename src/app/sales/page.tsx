@@ -130,9 +130,9 @@ export default function SalesPage() {
               fontSize: '0.82rem',
               fontWeight: 700,
               fontFamily: 'var(--font-heading)',
-              background: activeTab === 'sales' ? 'rgba(16, 185, 129, 0.2)' : 'rgba(255, 255, 255, 0.04)',
-              color: activeTab === 'sales' ? '#10B981' : '#CBD5E1',
-              border: activeTab === 'sales' ? '1px solid rgba(16, 185, 129, 0.45)' : '1px solid rgba(255, 255, 255, 0.1)',
+              background: activeTab === 'sales' ? 'rgba(16, 185, 129, 0.15)' : 'rgba(15, 23, 42, 0.04)',
+              color: activeTab === 'sales' ? 'var(--color-primary)' : 'var(--color-muted)',
+              border: activeTab === 'sales' ? '1px solid rgba(16, 185, 129, 0.35)' : '1px solid var(--color-card-border)',
               display: 'flex',
               alignItems: 'center',
               gap: '6px',
@@ -150,9 +150,9 @@ export default function SalesPage() {
               fontSize: '0.82rem',
               fontWeight: 700,
               fontFamily: 'var(--font-heading)',
-              background: activeTab === 'expenses' ? 'rgba(244, 63, 94, 0.2)' : 'rgba(255, 255, 255, 0.04)',
-              color: activeTab === 'expenses' ? '#F43F5E' : '#CBD5E1',
-              border: activeTab === 'expenses' ? '1px solid rgba(244, 63, 94, 0.45)' : '1px solid rgba(255, 255, 255, 0.1)',
+              background: activeTab === 'expenses' ? 'rgba(244, 63, 94, 0.12)' : 'rgba(15, 23, 42, 0.04)',
+              color: activeTab === 'expenses' ? 'var(--color-rose)' : 'var(--color-muted)',
+              border: activeTab === 'expenses' ? '1px solid rgba(244, 63, 94, 0.3)' : '1px solid var(--color-card-border)',
               display: 'flex',
               alignItems: 'center',
               gap: '6px',
@@ -232,10 +232,10 @@ export default function SalesPage() {
                                 {sale.category}
                               </span>
                             </td>
-                            <td className="font-mono" style={{ color: '#E2E8F0', fontWeight: 600 }}>
+                            <td className="font-mono" style={{ color: 'var(--color-muted)', fontWeight: 600 }}>
                               {sale.quantitySold}
                             </td>
-                            <td className="font-mono" style={{ color: '#CBD5E1' }}>
+                            <td className="font-mono" style={{ color: 'var(--color-muted)' }}>
                               ₦{sale.salePricePerUnit.toFixed(2)}
                             </td>
                             <td className="font-mono" style={{ color: '#10B981', fontWeight: 700, fontSize: '0.9rem' }}>
@@ -285,7 +285,7 @@ export default function SalesPage() {
                                 {exp.goodsName}
                               </span>
                             </td>
-                            <td style={{ color: '#CBD5E1' }}>{exp.description}</td>
+                            <td style={{ color: 'var(--color-muted)' }}>{exp.description}</td>
                             <td className="font-mono" style={{ color: '#F43F5E', fontWeight: 700, fontSize: '0.9rem' }}>
                               -₦{exp.amount.toFixed(2)}
                             </td>
@@ -342,7 +342,7 @@ export default function SalesPage() {
                             {batch.goodsName}
                           </h4>
                           <p style={{ fontSize: '0.75rem', color: 'var(--color-muted)', marginTop: '2px' }}>
-                            Remaining: <strong style={{ color: '#E2E8F0' }}>{remaining}</strong> of {batch.quantityPurchased} units
+                            Remaining: <strong style={{ color: 'var(--color-muted)' }}>{remaining}</strong> of {batch.quantityPurchased} units
                           </p>
                         </div>
                         <span className="font-mono" style={{ fontSize: '0.78rem', fontWeight: 800, color: '#06B6D4' }}>

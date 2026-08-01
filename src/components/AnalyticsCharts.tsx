@@ -113,14 +113,14 @@ export const LineChart: React.FC<{
                   y1={y}
                   x2={width - paddingRight}
                   y2={y}
-                  stroke="rgba(255, 255, 255, 0.12)"
+                  stroke="rgba(15, 23, 42, 0.08)"
                   strokeWidth="1"
                   strokeDasharray="4 4"
                 />
                 <text
                   x={paddingLeft - 10}
                   y={y + 4}
-                  fill="#94A3B8"
+                  fill='var(--color-muted)'
                   fontSize="10px"
                   fontFamily="var(--font-mono)"
                   textAnchor="end"
@@ -140,7 +140,7 @@ export const LineChart: React.FC<{
                 key={i}
                 x={x}
                 y={height - paddingBottom + 20}
-                fill="#94A3B8"
+                fill='var(--color-muted)'
                 fontSize="10px"
                 fontFamily="var(--font-heading)"
                 textAnchor="middle"
@@ -275,14 +275,14 @@ export const BarChart: React.FC<{
                   y1={y}
                   x2={width - paddingRight}
                   y2={y}
-                  stroke="rgba(255, 255, 255, 0.12)"
+                  stroke="rgba(15, 23, 42, 0.08)"
                   strokeWidth="1"
                   strokeDasharray="4 4"
                 />
                 <text
                   x={paddingLeft - 10}
                   y={y + 4}
-                  fill="#94A3B8"
+                  fill='var(--color-muted)'
                   fontSize="10px"
                   fontFamily="var(--font-mono)"
                   textAnchor="end"
@@ -298,7 +298,7 @@ export const BarChart: React.FC<{
             y1={height - paddingBottom}
             x2={width - paddingRight}
             y2={height - paddingBottom}
-            stroke="rgba(255, 255, 255, 0.2)"
+            stroke="rgba(15, 23, 42, 0.12)"
             strokeWidth="1"
           />
 
@@ -344,7 +344,7 @@ export const BarChart: React.FC<{
                 <text
                   x={labelX}
                   y={height - paddingBottom + 20}
-                  fill="#94A3B8"
+                  fill='var(--color-muted)'
                   fontSize="10px"
                   fontFamily="var(--font-heading)"
                   textAnchor="middle"
@@ -406,7 +406,7 @@ export const DonutChart: React.FC<{
         {/* SVG Donut */}
         <div style={{ position: 'relative', width: '180px', height: '180px' }}>
           <svg viewBox="0 0 180 180" style={{ width: '100%', height: '100%', transform: 'rotate(-90deg)' }}>
-            <circle cx="90" cy="90" r={radius} fill="none" stroke="rgba(255, 255, 255, 0.08)" strokeWidth="18" />
+            <circle cx="90" cy="90" r={radius} fill="none" stroke="rgba(15, 23, 42, 0.06)" strokeWidth="18" />
 
             {data.map((item, i) => {
               if (item.value === 0) return null;

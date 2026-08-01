@@ -147,7 +147,7 @@ export default function InventoryPage() {
                 fontWeight: 600,
                 fontFamily: 'var(--font-heading)',
                 background: selectedCategory === cat ? 'rgba(16, 185, 129, 0.2)' : 'rgba(255, 255, 255, 0.04)',
-                color: selectedCategory === cat ? '#10B981' : '#CBD5E1',
+                color: selectedCategory === cat ? '#10B981' : 'var(--color-muted)',
                 border: selectedCategory === cat ? '1px solid rgba(16, 185, 129, 0.4)' : '1px solid rgba(255, 255, 255, 0.1)',
                 transition: 'all 200ms ease',
                 cursor: 'pointer',
@@ -230,7 +230,7 @@ export default function InventoryPage() {
                           </td>
                           <td>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                              <span className="font-mono" style={{ fontSize: '0.82rem', fontWeight: 700, color: '#E2E8F0' }}>
+                              <span className="font-mono" style={{ fontSize: '0.82rem', fontWeight: 700, color: 'var(--color-muted)' }}>
                                 {batch.quantitySold}/{batch.quantityPurchased}
                               </span>
                               <div style={{ width: '64px', height: '6px', background: 'rgba(255,255,255,0.08)', borderRadius: '999px', overflow: 'hidden' }}>
@@ -248,7 +248,7 @@ export default function InventoryPage() {
                               </div>
                             </div>
                           </td>
-                          <td className="font-mono" style={{ color: '#E2E8F0', fontWeight: 600 }}>
+                          <td className="font-mono" style={{ color: 'var(--color-muted)', fontWeight: 600 }}>
                             ₦{(batch.quantityPurchased * batch.purchaseCostPerUnit).toLocaleString()}
                           </td>
                           <td className="font-mono" style={{ color: '#10B981', fontWeight: 700 }}>
@@ -326,7 +326,7 @@ export default function InventoryPage() {
               >
                 <Boxes size={40} style={{ opacity: 0.5, color: '#06B6D4' }} />
                 <div>
-                  <p style={{ fontSize: '0.95rem', fontWeight: 600, color: '#E2E8F0' }}>
+                  <p style={{ fontSize: '0.95rem', fontWeight: 600, color: 'var(--color-muted)' }}>
                     No inventory batch shipments found
                   </p>
                   <p style={{ fontSize: '0.78rem', color: 'var(--color-muted)', marginTop: '4px' }}>
