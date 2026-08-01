@@ -48,28 +48,23 @@ export const Sidebar: React.FC<SidebarProps> = ({ onAddStoreClick }) => {
   return (
     <>
       {/* Mobile Toggle Button */}
-      <button
-        onClick={toggleSidebar}
-        className="btn btn-secondary"
-        style={{
-          position: 'fixed',
-          top: '12px',
-          left: '12px',
-          zIndex: 50,
-          padding: '8px',
-          display: 'none',
-        }}
-        aria-label="Toggle Sidebar"
-      >
-        {isOpen ? <X size={20} /> : <Menu size={20} />}
-      </button>
-      <style jsx>{`
-        @media (max-width: 1024px) {
-          button[aria-label="Toggle Sidebar"] {
-            display: inline-flex !important;
-          }
-        }
-      `}</style>
+      {!isOpen && (
+        <button
+          onClick={toggleSidebar}
+          className="mobile-toggle-btn"
+          style={{
+            position: 'fixed',
+            top: '16px',
+            left: '16px',
+            zIndex: 50,
+            padding: '8px',
+            display: 'none',
+          }}
+          aria-label="Open Sidebar"
+        >
+          <Menu size={20} />
+        </button>
+      )}
 
       {/* Backdrop for mobile */}
       {isOpen && (
@@ -100,7 +95,22 @@ export const Sidebar: React.FC<SidebarProps> = ({ onAddStoreClick }) => {
           transition: 'transform 300ms cubic-bezier(0.4, 0, 0.2, 1)',
         }}
       >
-        <div style={{ display: 'flex', flexDirection: 'column', flex: 1, overflowY: 'auto', padding: '24px 16px' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', flex: 1, overflowY: 'auto', padding: '24px 16px', position: 'relative' }}>
+          {/* Close button for mobile inside sidebar */}
+          <button
+            onClick={toggleSidebar}
+            className="mobile-close-btn"
+            style={{
+              position: 'absolute',
+              top: '20px',
+              right: '16px',
+              padding: '6px',
+              display: 'none',
+            }}
+            aria-label="Close Sidebar"
+          >
+            <X size={20} />
+          </button>
           {/* Logo / Brand Title */}
           <div style={{ marginBottom: '28px', padding: '0 6px' }}>
             <Link href="/" onClick={() => setIsOpen(false)} style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>

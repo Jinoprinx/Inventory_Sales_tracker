@@ -161,7 +161,7 @@ export const DashboardShell: React.FC<DashboardShellProps> = ({ children }) => {
               >
                 <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10B981', boxShadow: '0 0 10px #10B981' }} className="animate-pulse-glow" />
                 <span style={{ fontSize: '0.78rem', fontFamily: 'var(--font-heading)', fontWeight: 700, color: 'var(--color-primary)', letterSpacing: '0.04em' }}>
-                  ACTIVE STORE: <strong style={{ color: 'var(--color-foreground)' }}>{activeStore.name.toUpperCase()}</strong>
+                  <span className="hidden-mobile">ACTIVE STORE: </span><strong style={{ color: 'var(--color-foreground)' }}>{activeStore.name.toUpperCase()}</strong>
                 </span>
               </div>
             )}
@@ -173,7 +173,7 @@ export const DashboardShell: React.FC<DashboardShellProps> = ({ children }) => {
               className="btn btn-outline"
               style={{ padding: '7px 14px', fontSize: '0.78rem' }}
             >
-              <Plus size={15} /> New Store Profile
+              <Plus size={15} /> <span className="hidden-mobile">New Store Profile</span>
             </button>
           </div>
         </header>
